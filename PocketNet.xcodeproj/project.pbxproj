@@ -1,0 +1,568 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E13CA3F1F3325760078BCBF /* PocketNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E13CA351F3325750078BCBF /* PocketNet.framework */; };
+		0E13CA441F3325760078BCBF /* NetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA431F3325760078BCBF /* NetTests.swift */; };
+		0E13CA461F3325760078BCBF /* PocketNet.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E13CA381F3325750078BCBF /* PocketNet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E13CA581F3325950078BCBF /* FormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA501F3325950078BCBF /* FormData.swift */; };
+		0E13CA591F3325950078BCBF /* PocketNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA511F3325950078BCBF /* PocketNet.swift */; };
+		0E13CA5A1F3325950078BCBF /* PocketAlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA531F3325950078BCBF /* PocketAlamofireAdapter.swift */; };
+		0E13CA5B1F3325950078BCBF /* PocketNetAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA541F3325950078BCBF /* PocketNetAlamofire.swift */; };
+		0E13CA5C1F3325950078BCBF /* NetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA551F3325950078BCBF /* NetError.swift */; };
+		0E13CA5D1F3325950078BCBF /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA561F3325950078BCBF /* NetworkResponse.swift */; };
+		0E13CA5E1F3325950078BCBF /* RequestNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA571F3325950078BCBF /* RequestNet.swift */; };
+		0E13CA621F348C500078BCBF /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA5F1F348C500078BCBF /* Convertible.swift */; };
+		0E13CA631F348C500078BCBF /* NetSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA601F348C500078BCBF /* NetSupport.swift */; };
+		0E13CA641F348C500078BCBF /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA611F348C500078BCBF /* RequestBuilder.swift */; };
+		E31A7E5766D5FEDE14258270 /* Pods_PocketNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C74EC6B9A7355ED45E03DCF /* Pods_PocketNet.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0E13CA401F3325760078BCBF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E13CA2C1F3325750078BCBF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E13CA341F3325750078BCBF;
+			remoteInfo = Net;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E13CA351F3325750078BCBF /* PocketNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PocketNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E13CA381F3325750078BCBF /* PocketNet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PocketNet.h; sourceTree = "<group>"; };
+		0E13CA391F3325750078BCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E13CA3E1F3325760078BCBF /* PocketNetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PocketNetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E13CA431F3325760078BCBF /* NetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetTests.swift; sourceTree = "<group>"; };
+		0E13CA451F3325760078BCBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E13CA501F3325950078BCBF /* FormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormData.swift; sourceTree = "<group>"; };
+		0E13CA511F3325950078BCBF /* PocketNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketNet.swift; sourceTree = "<group>"; };
+		0E13CA531F3325950078BCBF /* PocketAlamofireAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketAlamofireAdapter.swift; sourceTree = "<group>"; };
+		0E13CA541F3325950078BCBF /* PocketNetAlamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketNetAlamofire.swift; sourceTree = "<group>"; };
+		0E13CA551F3325950078BCBF /* NetError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetError.swift; sourceTree = "<group>"; };
+		0E13CA561F3325950078BCBF /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
+		0E13CA571F3325950078BCBF /* RequestNet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestNet.swift; sourceTree = "<group>"; };
+		0E13CA5F1F348C500078BCBF /* Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
+		0E13CA601F348C500078BCBF /* NetSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetSupport.swift; sourceTree = "<group>"; };
+		0E13CA611F348C500078BCBF /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		2C74EC6B9A7355ED45E03DCF /* Pods_PocketNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78136B9A743A8D550241CC46 /* Pods-PocketNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketNet/Pods-PocketNet.release.xcconfig"; sourceTree = "<group>"; };
+		C753D0F05CD3704DCEA70902 /* Pods-Net.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Net.release.xcconfig"; path = "Pods/Target Support Files/Pods-Net/Pods-Net.release.xcconfig"; sourceTree = "<group>"; };
+		CFE75273A5910C7C6E75DB1E /* Pods-PocketNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketNet/Pods-PocketNet.debug.xcconfig"; sourceTree = "<group>"; };
+		DE42B6030DC156240966D25A /* Pods-Net.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Net.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Net/Pods-Net.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E13CA311F3325750078BCBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E31A7E5766D5FEDE14258270 /* Pods_PocketNet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E13CA3B1F3325760078BCBF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E13CA3F1F3325760078BCBF /* PocketNet.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E13CA2B1F3325750078BCBF = {
+			isa = PBXGroup;
+			children = (
+				0E13CA371F3325750078BCBF /* PocketNet */,
+				0E13CA421F3325760078BCBF /* PocketNetTests */,
+				0E13CA361F3325750078BCBF /* Products */,
+				2B56F537FFB3BDF1B003F9F5 /* Pods */,
+				999C84A647339EACA2A0FC49 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0E13CA361F3325750078BCBF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E13CA351F3325750078BCBF /* PocketNet.framework */,
+				0E13CA3E1F3325760078BCBF /* PocketNetTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0E13CA371F3325750078BCBF /* PocketNet */ = {
+			isa = PBXGroup;
+			children = (
+				0E13CA381F3325750078BCBF /* PocketNet.h */,
+				0E13CA4F1F3325950078BCBF /* Net */,
+				0E13CA391F3325750078BCBF /* Info.plist */,
+			);
+			path = PocketNet;
+			sourceTree = "<group>";
+		};
+		0E13CA421F3325760078BCBF /* PocketNetTests */ = {
+			isa = PBXGroup;
+			children = (
+				0E13CA431F3325760078BCBF /* NetTests.swift */,
+				0E13CA451F3325760078BCBF /* Info.plist */,
+			);
+			path = PocketNetTests;
+			sourceTree = "<group>";
+		};
+		0E13CA4F1F3325950078BCBF /* Net */ = {
+			isa = PBXGroup;
+			children = (
+				0E13CA511F3325950078BCBF /* PocketNet.swift */,
+				0E13CA5F1F348C500078BCBF /* Convertible.swift */,
+				0E13CA601F348C500078BCBF /* NetSupport.swift */,
+				0E13CA611F348C500078BCBF /* RequestBuilder.swift */,
+				0E13CA571F3325950078BCBF /* RequestNet.swift */,
+				0E13CA501F3325950078BCBF /* FormData.swift */,
+				0E13CA521F3325950078BCBF /* PocketNetAlamoFire */,
+				0E13CA551F3325950078BCBF /* NetError.swift */,
+				0E13CA561F3325950078BCBF /* NetworkResponse.swift */,
+			);
+			path = Net;
+			sourceTree = "<group>";
+		};
+		0E13CA521F3325950078BCBF /* PocketNetAlamoFire */ = {
+			isa = PBXGroup;
+			children = (
+				0E13CA531F3325950078BCBF /* PocketAlamofireAdapter.swift */,
+				0E13CA541F3325950078BCBF /* PocketNetAlamofire.swift */,
+			);
+			path = PocketNetAlamoFire;
+			sourceTree = "<group>";
+		};
+		2B56F537FFB3BDF1B003F9F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE42B6030DC156240966D25A /* Pods-Net.debug.xcconfig */,
+				C753D0F05CD3704DCEA70902 /* Pods-Net.release.xcconfig */,
+				CFE75273A5910C7C6E75DB1E /* Pods-PocketNet.debug.xcconfig */,
+				78136B9A743A8D550241CC46 /* Pods-PocketNet.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		999C84A647339EACA2A0FC49 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C74EC6B9A7355ED45E03DCF /* Pods_PocketNet.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0E13CA321F3325750078BCBF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E13CA461F3325760078BCBF /* PocketNet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0E13CA341F3325750078BCBF /* PocketNet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E13CA491F3325760078BCBF /* Build configuration list for PBXNativeTarget "PocketNet" */;
+			buildPhases = (
+				DFFCBE328139FAE9DC91C971 /* [CP] Check Pods Manifest.lock */,
+				0E13CA301F3325750078BCBF /* Sources */,
+				0E13CA311F3325750078BCBF /* Frameworks */,
+				0E13CA321F3325750078BCBF /* Headers */,
+				0E13CA331F3325750078BCBF /* Resources */,
+				F33A9ED1FAB055B3ED8E479A /* [CP] Copy Pods Resources */,
+				0E67D92C1F8E5CC000A1B85C /* SwiftLint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PocketNet;
+			productName = Net;
+			productReference = 0E13CA351F3325750078BCBF /* PocketNet.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0E13CA3D1F3325760078BCBF /* PocketNetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E13CA4C1F3325760078BCBF /* Build configuration list for PBXNativeTarget "PocketNetTests" */;
+			buildPhases = (
+				0E13CA3A1F3325760078BCBF /* Sources */,
+				0E13CA3B1F3325760078BCBF /* Frameworks */,
+				0E13CA3C1F3325760078BCBF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E13CA411F3325760078BCBF /* PBXTargetDependency */,
+			);
+			name = PocketNetTests;
+			productName = NetTests;
+			productReference = 0E13CA3E1F3325760078BCBF /* PocketNetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E13CA2C1F3325750078BCBF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Jose Antonio García Yáñez";
+				TargetAttributes = {
+					0E13CA341F3325750078BCBF = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					0E13CA3D1F3325760078BCBF = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0E13CA2F1F3325750078BCBF /* Build configuration list for PBXProject "PocketNet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0E13CA2B1F3325750078BCBF;
+			productRefGroup = 0E13CA361F3325750078BCBF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E13CA341F3325750078BCBF /* PocketNet */,
+				0E13CA3D1F3325760078BCBF /* PocketNetTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E13CA331F3325750078BCBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E13CA3C1F3325760078BCBF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E67D92C1F8E5CC000A1B85C /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint #autocorrect\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+		DFFCBE328139FAE9DC91C971 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PocketNet-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F33A9ED1FAB055B3ED8E479A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketNet/Pods-PocketNet-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E13CA301F3325750078BCBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E13CA5E1F3325950078BCBF /* RequestNet.swift in Sources */,
+				0E13CA631F348C500078BCBF /* NetSupport.swift in Sources */,
+				0E13CA621F348C500078BCBF /* Convertible.swift in Sources */,
+				0E13CA5B1F3325950078BCBF /* PocketNetAlamofire.swift in Sources */,
+				0E13CA581F3325950078BCBF /* FormData.swift in Sources */,
+				0E13CA5C1F3325950078BCBF /* NetError.swift in Sources */,
+				0E13CA591F3325950078BCBF /* PocketNet.swift in Sources */,
+				0E13CA5A1F3325950078BCBF /* PocketAlamofireAdapter.swift in Sources */,
+				0E13CA5D1F3325950078BCBF /* NetworkResponse.swift in Sources */,
+				0E13CA641F348C500078BCBF /* RequestBuilder.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E13CA3A1F3325760078BCBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E13CA441F3325760078BCBF /* NetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E13CA411F3325760078BCBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E13CA341F3325750078BCBF /* PocketNet */;
+			targetProxy = 0E13CA401F3325760078BCBF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E13CA471F3325760078BCBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0E13CA481F3325760078BCBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0E13CA4A1F3325760078BCBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE75273A5910C7C6E75DB1E /* Pods-PocketNet.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PocketNet/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PocketSwift.PocketNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		0E13CA4B1F3325760078BCBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78136B9A743A8D550241CC46 /* Pods-PocketNet.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = PocketNet/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PocketSwift.PocketNet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		0E13CA4D1F3325760078BCBF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = NetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JoseAntonioGarciaY.NetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		0E13CA4E1F3325760078BCBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = NetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = JoseAntonioGarciaY.NetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E13CA2F1F3325750078BCBF /* Build configuration list for PBXProject "PocketNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E13CA471F3325760078BCBF /* Debug */,
+				0E13CA481F3325760078BCBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E13CA491F3325760078BCBF /* Build configuration list for PBXNativeTarget "PocketNet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E13CA4A1F3325760078BCBF /* Debug */,
+				0E13CA4B1F3325760078BCBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E13CA4C1F3325760078BCBF /* Build configuration list for PBXNativeTarget "PocketNetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E13CA4D1F3325760078BCBF /* Debug */,
+				0E13CA4E1F3325760078BCBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E13CA2C1F3325750078BCBF /* Project object */;
+}
