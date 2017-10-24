@@ -54,13 +54,13 @@ let net: PocketNet = PocketNetAlamofire()
     
 let netSupport = NetSupport(net: net)
 
-let request = RequestBuilder()
+let request = NetRequest.Builder()
             	.method(.post)
-                .setUrl("url")
-                .setRequestHeader([:])
-                .setParameterEncoding(.json)
-                .addBody(params: "")
-                .setShouldCache(false)
+                .url("url")
+                .requestHeader([:])
+                .parameterEncoding(.json)
+                .body(params: "")
+                .shouldCache(false)
                 .build()
 
 netSupport.netJsonMappableRequest(request, completion: {(result: Result<ConvertibleObject, Error>) in
