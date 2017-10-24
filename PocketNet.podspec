@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes', 'PocketNet/*.{h,m,swift}', 'PocketNet/Net/*', 'PocketNet/Net/PocketNetAlamofire/*' 
   s.platform     = :ios, '10.0'
   s.requires_arc = true
-  s.dependency 'Alamofire', '~> 4.0'
-  s.dependency 'ResponseDetective', '~> 1.0'
-  s.dependency 'Result', '~> 3.0.0'
+  s.dependency 'Alamofire', '4.0'
+  s.dependency 'ResponseDetective', '1.0'
+  s.dependency 'Result', '3.0.0'
 end
