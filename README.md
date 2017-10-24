@@ -6,13 +6,14 @@
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/PocketNet.svg)](https://img.shields.io/cocoapods/v/PocketNet.svg)
 [![License](https://img.shields.io/cocoapods/l/PocketNet.svg?style=flat)](http://cocoapods.org/pods/PocketNet)
 
-##PocketNet
+## PocketNet
 
 Elegant net abstraction layer written in Swift 4.0, we provide an integration with Alamofire.
 
 ## Requirements
 
 - iOS 10.0+ 
+- Swift 4.0+
 
 ## Installation
 
@@ -26,7 +27,7 @@ $ gem install cocoapods
 
 > CocoaPods 1.1+ is required to build PocketNet 1.0.0
 
-To integrate Alamofire into your Xcode project using CocoaPods, specify it in your `Podfile`:
+To integrate PocketNet into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
 ```ruby
 source 'https://github.com/CocoaPods/Specs.git'
@@ -42,6 +43,34 @@ Then, run the following command:
 
 ```bash
 $ pod install
+```
+
+## Usage
+
+```swift
+import PocketNet
+
+let net: PocketNet = PocketNetAlamofire()
+    
+let netSupport = NetSupport(net: net)
+
+let request = RequestBuilder()
+            	.method(.post)
+                .setUrl("url")
+                .setRequestHeader([:])
+                .setParameterEncoding(.json)
+                .addBody(params: "")
+                .setShouldCache(false)
+                .build()
+
+netSupport.netJsonMappableRequest(request, completion: {(result: Result<ConvertibleObject, Error>) in
+	switch result {
+	case .success(let convertibleObject):
+		/// do something with convertibleObject
+	case .failure(let error):
+	    /// do something with error
+	}
+})
 ```
 
 ## Authors
