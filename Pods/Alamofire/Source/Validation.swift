@@ -1,7 +1,7 @@
 //
 //  Validation.swift
 //
-//  Copyright (c) 2014-2017 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2014-2016 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -48,13 +48,7 @@ extension Request {
         init?(_ string: String) {
             let components: [String] = {
                 let stripped = string.trimmingCharacters(in: .whitespacesAndNewlines)
-
-            #if swift(>=3.2)
-                let split = stripped[..<(stripped.range(of: ";")?.lowerBound ?? stripped.endIndex)]
-            #else
                 let split = stripped.substring(to: stripped.range(of: ";")?.lowerBound ?? stripped.endIndex)
-            #endif
-
                 return split.components(separatedBy: "/")
             }()
 
@@ -168,7 +162,7 @@ extension DataRequest {
     /// - returns: The request.
     @discardableResult
     public func validate(_ validation: @escaping Validation) -> Self {
-        let validationExecution: () -> Void = { [unowned self] in
+        let validationExecution: () -> Void = {
             if
                 let response = self.response,
                 self.delegate.error == nil,
@@ -192,7 +186,7 @@ extension DataRequest {
     /// - returns: The request.
     @discardableResult
     public func validate<S: Sequence>(statusCode acceptableStatusCodes: S) -> Self where S.Iterator.Element == Int {
-        return validate { [unowned self] _, response, _ in
+        return validate { _, response, _ in
             return self.validate(statusCode: acceptableStatusCodes, response: response)
         }
     }
@@ -206,7 +200,7 @@ extension DataRequest {
     /// - returns: The request.
     @discardableResult
     public func validate<S: Sequence>(contentType acceptableContentTypes: S) -> Self where S.Iterator.Element == String {
-        return validate { [unowned self] _, response, data in
+        return validate { _, response, data in
             return self.validate(contentType: acceptableContentTypes, response: response, data: data)
         }
     }
@@ -244,7 +238,7 @@ extension DownloadRequest {
     /// - returns: The request.
     @discardableResult
     public func validate(_ validation: @escaping Validation) -> Self {
-        let validationExecution: () -> Void = { [unowned self] in
+        let validationExecution: () -> Void = {
             let request = self.request
             let temporaryURL = self.downloadDelegate.temporaryURL
             let destinationURL = self.downloadDelegate.destinationURL
@@ -272,7 +266,7 @@ extension DownloadRequest {
     /// - returns: The request.
     @discardableResult
     public func validate<S: Sequence>(statusCode acceptableStatusCodes: S) -> Self where S.Iterator.Element == Int {
-        return validate { [unowned self] _, response, _, _ in
+        return validate { _, response, _, _ in
             return self.validate(statusCode: acceptableStatusCodes, response: response)
         }
     }
@@ -286,7 +280,7 @@ extension DownloadRequest {
     /// - returns: The request.
     @discardableResult
     public func validate<S: Sequence>(contentType acceptableContentTypes: S) -> Self where S.Iterator.Element == String {
-        return validate { [unowned self] _, response, _, _ in
+        return validate { _, response, _, _ in
             let fileURL = self.downloadDelegate.fileURL
 
             guard let validFileURL = fileURL else {
