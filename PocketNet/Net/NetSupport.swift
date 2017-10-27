@@ -8,13 +8,13 @@ public class NetSupport {
         self.net = net
     }
 
-    public func netJsonMappableRequest<T: Convertible>(_ request: RequestNet, completion: @escaping ((Result<T, NetError>) -> Void)) -> Int {
+    public func netJsonMappableRequest<T: Convertible>(_ request: NetRequest, completion: @escaping ((Result<T, NetError>) -> Void)) -> Int {
         return net.launchRequest(request, completion: { [weak self] result in
             self?.processResponse(completion: completion, result: result)
         })
     }
     
-    public func netUploadArchives<T: Convertible>(_ request: RequestNet, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((Result<T, NetError>) -> Void)) -> Int {
+    public func netUploadArchives<T: Convertible>(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((Result<T, NetError>) -> Void)) -> Int {
         return net.uploadRequest(request, archives: archives,
         actualProgress: { progress in
             actualProgress(progress)

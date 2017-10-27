@@ -4,7 +4,7 @@ import Result
 
 public class PocketAlamofireAdapter {
 
-    public static func adaptRequest(_ request: RequestNet, manager: Alamofire.SessionManager, completion: @escaping ((AntitypicalResult) -> Void)) -> Int {
+    public static func adaptRequest(_ request: NetRequest, manager: Alamofire.SessionManager, completion: @escaping ((AntitypicalResult) -> Void)) -> Int {
         let afResponse = manager.request(
                 request.url,
                 method: self.transformMethod(request.method),
@@ -16,7 +16,7 @@ public class PocketAlamofireAdapter {
         return (afResponse.task != nil) ? afResponse.task!.taskIdentifier : -1
     }
     
-    public static func adaptUploadRequest(_ request: RequestNet, manager: Alamofire.SessionManager, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((AntitypicalResult) -> Void)) -> Int {
+    public static func adaptUploadRequest(_ request: NetRequest, manager: Alamofire.SessionManager, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((AntitypicalResult) -> Void)) -> Int {
         var uploadRequest: Alamofire.Request!
         var urlRequest: URLRequest!
         do {

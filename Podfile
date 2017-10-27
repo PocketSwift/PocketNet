@@ -12,3 +12,7 @@ end
 target 'PocketNet' do
    shared_pods
 end
+
+target 'PocketNetTests' do
+   
+end

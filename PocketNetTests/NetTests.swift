@@ -1,5 +1,5 @@
 import XCTest
-@testable import Net
+import PocketNet
 
 class PocketNetTests: XCTestCase {
     
