@@ -1,7 +1,7 @@
 ![](Images/Header.png)
 
 ![](https://www.bitrise.io/app/c09426001dedd91c.svg?token=4zhZMFtDpH-9BhWvGP5-1g&branch=develop)
-![](https://img.shields.io/badge/swift-3.0.2-orange.svg)
+![](https://img.shields.io/badge/swift-3.1-orange.svg)
 ![](https://img.shields.io/github/release/netguru/ResponseDetective.svg)
 ![](https://img.shields.io/badge/carthage-compatible-green.svg)
 ![](https://img.shields.io/badge/cocoapods-compatible-green.svg)
@@ -10,7 +10,7 @@
 
 ## Requirements
 
-ResponseDetective is written in **Swift 3.0.2** and supports **iOS 8.0+**, **macOS 10.9+** and **tvOS 9.0+**.
+ResponseDetective is written in **Swift 3.1** and supports **iOS 8.0+**, **macOS 10.9+** and **tvOS 9.0+**.
 
 ## Usage
 
@@ -59,7 +59,7 @@ AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfi
 ```swift
 // Swift (Alamofire)
 
-let manager = Alamofire.Manager(configuration: configuration)
+let manager = Alamofire.SessionManager(configuration: configuration)
 ```
 
 And that's all!
