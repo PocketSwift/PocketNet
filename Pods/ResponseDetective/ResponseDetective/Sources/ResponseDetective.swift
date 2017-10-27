@@ -30,9 +30,8 @@ import Foundation
 		"*/json": JSONBodyDeserializer(),
 		"*/xml": XMLBodyDeserializer(),
 		"*/html": HTMLBodyDeserializer(),
-		"*/x-www-form-urlencoded": URLEncodedBodyDeserializer(),
 		"image/*": ImageBodyDeserializer(),
-		"text/*": PlaintextBodyDeserializer(),
+		"text/plain": PlaintextBodyDeserializer(),
 	]
 
 	// MARK: Configuration
