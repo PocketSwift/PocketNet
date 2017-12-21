@@ -31,13 +31,33 @@ public class PocketNetAlamofire: PocketNet {
     let DF_CACHE_SIZE = 4 * 5 * 1024 * 1024
     let manager: Alamofire.SessionManager
     let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.apple.com")!
+    let customSession: CustomSessionDelegate?
 
-    public init(requestTimeout: TimeInterval = 20.0) {
+    public init(requestTimeout: TimeInterval = 20.0, pinningSSLCertURL: URL? = nil, domain: String? = nil) {
         let configuration = URLSessionConfiguration.default
         #if DEBUG
             ResponseDetective.enable(inConfiguration: configuration)
         #endif
-        self.manager = Alamofire.SessionManager(configuration: configuration)
+        if let certURL = pinningSSLCertURL, let dom = domain, let customSession = CustomSessionDelegate(resourceURL: certURL) {
+            self.customSession = customSession
+            
+            let serverTrustPolicies: [String: ServerTrustPolicy] = [
+                dom: .pinPublicKeys(
+                    publicKeys: ServerTrustPolicy.publicKeys(),
+                    validateCertificateChain: true,
+                    validateHost: true
+                )
+            ]
+            self.manager = SessionManager(
+                delegate: customSession,
+                serverTrustPolicyManager: CustomServerTrustPolicyManager(
+                    policies: serverTrustPolicies
+                )
+            )
+        } else {
+            customSession = nil
+            self.manager = Alamofire.SessionManager(configuration: configuration)
+        }
         self.manager.session.configuration.timeoutIntervalForRequest = requestTimeout
         self.setupCaching(DF_CACHE_SIZE)
     }
