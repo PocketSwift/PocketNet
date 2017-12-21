@@ -25,7 +25,7 @@ Elegant net abstraction layer written in Swift 4.0, we provide an integration wi
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1+ is required to build PocketNet 1.1.0
+> CocoaPods 1.1+ is required to build PocketNet 1.2.0
 
 To integrate PocketNet into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -35,7 +35,7 @@ platform :ios, '10.0'
 use_frameworks!
 
 target '<Your Target Name>' do
-    pod 'PocketNet', '~> 1.1.0'
+    pod 'PocketNet', '~> 1.2.0'
 end
 ```
 
@@ -50,7 +50,7 @@ $ pod install
 ```swift
 import PocketNet
 
-let net: PocketNet = PocketNetAlamofire()
+let net: PocketNet = PocketNetAlamofire() /*or for SSL Pinning*/ PocketNetAlamofire(pinningSSLCertURL: Bundle.main.url(forResource: "cert", withExtension: "crt"), domain: "urlDomain")
     
 let netSupport = NetSupport(net: net)
 
