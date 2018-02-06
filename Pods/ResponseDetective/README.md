@@ -1,7 +1,7 @@
 ![](Images/Header.png)
 
 ![](https://www.bitrise.io/app/c09426001dedd91c.svg?token=4zhZMFtDpH-9BhWvGP5-1g&branch=develop)
-![](https://img.shields.io/badge/swift-3.1-orange.svg)
+![](https://img.shields.io/badge/swift-3.2-orange.svg)
 ![](https://img.shields.io/github/release/netguru/ResponseDetective.svg)
 ![](https://img.shields.io/badge/carthage-compatible-green.svg)
 ![](https://img.shields.io/badge/cocoapods-compatible-green.svg)
@@ -10,7 +10,7 @@
 
 ## Requirements
 
-ResponseDetective is written in **Swift 3.1** and supports **iOS 8.0+**, **macOS 10.9+** and **tvOS 9.0+**.
+ResponseDetective is written in **Swift 3.2** and supports **iOS 8.0+**, **macOS 10.9+** and **tvOS 9.0+**.
 
 ## Usage
 
@@ -132,6 +132,10 @@ pod 'ResponseDetective'
 ## About
 
 This project is made with <3 by [Netguru](https://netguru.co) and maintained by [Adrian Kashivskyy](https://github.com/akashivskyy).
+
+### Release names
+
+Starting from version 1.0.0, ResponseDetective's releases are named after [Sherlock Holmes canon stories](http://www.sherlockian.net/investigating/canon/), in chronological order. **What happens if we reach 60 releases and there are no more stories?** We don't know, maybe we'll start naming them after cats or something.
 
 ### License
 
