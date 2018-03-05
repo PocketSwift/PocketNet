@@ -20,6 +20,7 @@
 		0E13CA631F348C500078BCBF /* NetSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA601F348C500078BCBF /* NetSupport.swift */; };
 		0E633A141FEBCBF0004E4668 /* CustomSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E633A131FEBCBF0004E4668 /* CustomSessionDelegate.swift */; };
 		0E633A161FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E633A151FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift */; };
+		0E995725204D4CAC00FFB0EB /* PocketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995724204D4CAC00FFB0EB /* PocketResult.swift */; };
 		0ED1B8A61F9F610100D9BE0B /* PocketNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E13CA351F3325750078BCBF /* PocketNet.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		1854CF7E55FFE401718ACCFB /* Pods_PocketNetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F758F5F16C42CA6039628D /* Pods_PocketNetTests.framework */; };
 		B86463CC8928A1A8A829F201 /* Pods_PocketNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED1B8AB1F9F648700D9BE0B /* Pods_PocketNet.framework */; };
@@ -54,6 +55,7 @@
 		0E13CA601F348C500078BCBF /* NetSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetSupport.swift; sourceTree = "<group>"; };
 		0E633A131FEBCBF0004E4668 /* CustomSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSessionDelegate.swift; sourceTree = "<group>"; };
 		0E633A151FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomServerTrustPolicyManager.swift; sourceTree = "<group>"; };
+		0E995724204D4CAC00FFB0EB /* PocketResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketResult.swift; sourceTree = "<group>"; };
 		0ED1B8A51F9F60E200D9BE0B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED1B8A91F9F63A700D9BE0B /* Pods_PocketNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PocketNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED1B8AB1F9F648700D9BE0B /* Pods_PocketNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PocketNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +133,7 @@
 		0E13CA4F1F3325950078BCBF /* Net */ = {
 			isa = PBXGroup;
 			children = (
+				0E995724204D4CAC00FFB0EB /* PocketResult.swift */,
 				0E13CA511F3325950078BCBF /* PocketNet.swift */,
 				0E13CA5F1F348C500078BCBF /* Convertible.swift */,
 				0E13CA601F348C500078BCBF /* NetSupport.swift */,
@@ -332,13 +335,11 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-PocketNetTests/Pods-PocketNetTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResponseDetective.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -410,6 +411,7 @@
 				0E13CA5C1F3325950078BCBF /* NetError.swift in Sources */,
 				0E13CA591F3325950078BCBF /* PocketNet.swift in Sources */,
 				0E13CA5A1F3325950078BCBF /* PocketAlamofireAdapter.swift in Sources */,
+				0E995725204D4CAC00FFB0EB /* PocketResult.swift in Sources */,
 				0E13CA5D1F3325950078BCBF /* NetworkResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,4 @@
 import Foundation
-import Result
 import Alamofire
 import ResponseDetective
 
@@ -72,7 +71,7 @@ public class PocketNetAlamofire: PocketNet {
         Foundation.URLCache.shared = URLCache(memoryCapacity: 0, diskCapacity: 0, diskPath: nil)
     }
 
-    public func launchRequest(_ request: NetRequest, completion: @escaping ((AntitypicalResult) -> Void)) -> Int {
+    public func launchRequest(_ request: NetRequest, completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
         if !request.shouldCache {
             self.manager.session.configuration.requestCachePolicy = .reloadIgnoringLocalCacheData
         } else {
@@ -81,8 +80,12 @@ public class PocketNetAlamofire: PocketNet {
         return PocketAlamofireAdapter.adaptRequest(request, manager: self.manager, completion: completion)
     }
     
-    public func uploadRequest(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((AntitypicalResult) -> Void)) -> Int {
+    public func uploadRequest(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
         return PocketAlamofireAdapter.adaptUploadRequest(request, manager: self.manager, archives: archives, actualProgress: actualProgress, completion: completion)
+    }
+    
+    public func downloadRequest(_ request: NetRequest, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
+        return PocketAlamofireAdapter.adaptDownloadRequest(request, manager: self.manager, actualProgress: actualProgress, completion: completion)
     }
 
     public func cancelTask(identifier: Int) {

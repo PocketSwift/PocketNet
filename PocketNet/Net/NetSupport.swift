@@ -1,5 +1,4 @@
 import Foundation
-import Result
 
 public class NetSupport {
     public var net: PocketNet
@@ -8,13 +7,13 @@ public class NetSupport {
         self.net = net
     }
 
-    public func netJsonMappableRequest<T: Convertible>(_ request: NetRequest, completion: @escaping ((Result<T, NetError>) -> Void)) -> Int {
+    public func netJsonMappableRequest<T: Convertible>(_ request: NetRequest, completion: @escaping ((PocketResult<T, NetError>) -> Void)) -> Int {
         return net.launchRequest(request, completion: { [weak self] result in
             self?.processResponse(completion: completion, result: result)
         })
     }
     
-    public func netUploadArchives<T: Convertible>(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((Result<T, NetError>) -> Void)) -> Int {
+    public func netUploadArchives<T: Convertible>(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((PocketResult<T, NetError>) -> Void)) -> Int {
         return net.uploadRequest(request, archives: archives,
         actualProgress: { progress in
             actualProgress(progress)
@@ -24,20 +23,20 @@ public class NetSupport {
         })
     }
     
-    public func  processResponse<T: Convertible>(completion: @escaping ((Result<T, NetError>) -> Void), result: Result<NetworkResponse, NetError>) {
+    public func  processResponse<T: Convertible>(completion: @escaping ((PocketResult<T, NetError>) -> Void), result: PocketResult<NetworkResponse, NetError>) {
         switch result {
         case .success(let netResponse):
             guard netResponse.message != "" else {
-                completion(Result.failure(NetError.emptyResponse))
+                completion(PocketResult.failure(NetError.emptyResponse))
                 return
             }
             guard let object: T =  T.self.instance(netResponse.message) else {
-                completion(Result.failure(NetError.mappingError))
+                completion(PocketResult.failure(NetError.mappingError))
                 return
             }
-            completion(Result.success(object))
+            completion(PocketResult.success(object))
         case .failure(let netError):
-            completion(Result.failure(netError))
+            completion(PocketResult.failure(netError))
         }
     }
     
