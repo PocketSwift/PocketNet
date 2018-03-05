@@ -9,6 +9,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes', 'PocketNet/*.{h,m,swift}', 'PocketNet/Net/*', 'PocketNet/Net/PocketNetAlamofire/*' 
   s.platform     = :ios, '9.0'
   s.requires_arc = true
+  s.static_framework = true
   s.dependency 'Alamofire', '4.6.0'
   s.dependency 'ResponseDetective', '1.2.2'
 end
