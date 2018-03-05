@@ -6,7 +6,6 @@ inhibit_all_warnings!
 def shared_pods
    pod 'Alamofire', '4.6.0'
    pod 'ResponseDetective', '1.2.2'
-   pod 'Result', '3.2.4'
 end
 
 target 'PocketNet' do

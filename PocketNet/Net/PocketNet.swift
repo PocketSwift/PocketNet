@@ -1,7 +1,6 @@
 import Foundation
-import Result
 
-public typealias AntitypicalResult = Result<NetworkResponse, NetError>
+public typealias ResultNetworkResponse = PocketResult<NetworkResponse, NetError>
 
 public enum NetworkReachabilityStatus {
     case unknown
@@ -16,8 +15,9 @@ public enum ConnectionType {
 
 public protocol PocketNet {
     var reachabilityListener: ((NetworkReachabilityStatus?) -> Void)? { get set }
-    func launchRequest(_ request: NetRequest, completion: @escaping ((Result<NetworkResponse, NetError>) -> Void)) -> Int
-    func uploadRequest(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((Result<NetworkResponse, NetError>) -> Void)) -> Int
+    func launchRequest(_ request: NetRequest, completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int
+    func uploadRequest(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int
+    func downloadRequest(_ request: NetRequest, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int
     func isReachable() -> Bool
     func setupCaching(_ size: Int)
     func removeCaching()
