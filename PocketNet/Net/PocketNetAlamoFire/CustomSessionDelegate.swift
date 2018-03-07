@@ -1,5 +1,4 @@
 import UIKit
-import Alamofire
 
 class CustomSessionDelegate: SessionDelegate {
     

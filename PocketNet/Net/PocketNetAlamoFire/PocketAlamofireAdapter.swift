@@ -1,9 +1,8 @@
 import Foundation
-import Alamofire
 
 public class PocketAlamofireAdapter {
 
-    public static func adaptRequest(_ request: NetRequest, manager: Alamofire.SessionManager, completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
+    public static func adaptRequest(_ request: NetRequest, manager: SessionManager, completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
         let afResponse = manager.request(
                 request.url,
                 method: self.transformMethod(request.method),
@@ -19,8 +18,8 @@ public class PocketAlamofireAdapter {
         return (afResponse.task != nil) ? afResponse.task!.taskIdentifier : -1
     }
     
-    public static func adaptUploadRequest(_ request: NetRequest, manager: Alamofire.SessionManager, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
-        var uploadRequest: Alamofire.Request!
+    public static func adaptUploadRequest(_ request: NetRequest, manager: SessionManager, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
+        var uploadRequest: Request!
         var urlRequest: URLRequest!
         do {
             guard let url = URL(string: request.url) else { return -1 }
@@ -63,7 +62,7 @@ public class PocketAlamofireAdapter {
         return (uploadRequest.task != nil) ? uploadRequest.task!.taskIdentifier : -1
     }
     
-    public static func adaptDownloadRequest(_ request: NetRequest, manager: Alamofire.SessionManager, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
+    public static func adaptDownloadRequest(_ request: NetRequest, manager: SessionManager, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
         var urlRequest: URLRequest!
         do {
             guard let url = URL(string: request.url) else { return -1 }
@@ -107,37 +106,37 @@ public class PocketAlamofireAdapter {
         }
     }
 
-    internal static func transformMethod(_ method: Method) -> Alamofire.HTTPMethod {
+    internal static func transformMethod(_ method: Method) -> HTTPMethod {
         switch method {
         case .delete:
-            return Alamofire.HTTPMethod.delete
+            return HTTPMethod.delete
         case .get:
-            return Alamofire.HTTPMethod.get
+            return HTTPMethod.get
         case .head:
-            return Alamofire.HTTPMethod.head
+            return HTTPMethod.head
         case .options:
-            return Alamofire.HTTPMethod.options
+            return HTTPMethod.options
         case .patch:
-            return Alamofire.HTTPMethod.patch
+            return HTTPMethod.patch
         case .post:
-            return Alamofire.HTTPMethod.post
+            return HTTPMethod.post
         case .put:
-            return Alamofire.HTTPMethod.put
+            return HTTPMethod.put
         case .trace:
-            return Alamofire.HTTPMethod.trace
+            return HTTPMethod.trace
         case .connect:
-            return Alamofire.HTTPMethod.connect
+            return HTTPMethod.connect
         }
     }
 
-    internal static func transformParameterEncoding(_ parameterEncoding: ParameterEncoding) -> Alamofire.ParameterEncoding {
+    internal static func transformParameterEncoding(_ parameterEncoding: PParameterEncoding) -> ParameterEncoding {
         switch parameterEncoding {
         case .url:
-            return Alamofire.URLEncoding.default
+            return URLEncoding.default
         case .json:
-            return Alamofire.JSONEncoding.default
+            return JSONEncoding.default
         case .form:
-            return Alamofire.URLEncoding.default
+            return URLEncoding.default
         }
     }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-public typealias Parameters = [String: AnyObject]
+public typealias PParameters = [String: AnyObject]
 
 public struct NetRequest {
     public let url: String
@@ -22,8 +22,8 @@ public struct NetRequest {
         public var url: String = ""
         public var method: Method = .get
         public var headers: [String: String] = [:]
-        public var params: Parameters = [:]
-        public var encoding: ParameterEncoding = .url
+        public var params: PParameters = [:]
+        public var encoding: PParameterEncoding = .url
         public var shouldCache: Bool = true
         
         public init() { }
@@ -47,7 +47,7 @@ public struct NetRequest {
             guard let parameters = params else { return self }
             if let data = parameters.data(using: .utf8) {
                 do {
-                    guard let dic =  try JSONSerialization.jsonObject(with: data, options: []) as? Parameters
+                    guard let dic =  try JSONSerialization.jsonObject(with: data, options: []) as? PParameters
                         else { return self }
                     self.params = dic
                 } catch {
@@ -57,7 +57,7 @@ public struct NetRequest {
             return self
         }
         
-        public func parameterEncoding(_ parameterEncoding: ParameterEncoding) -> Self {
+        public func parameterEncoding(_ parameterEncoding: PParameterEncoding) -> Self {
             self.encoding = parameterEncoding
             return self
         }
@@ -81,10 +81,10 @@ public struct NetRequest {
 }
 
 public struct Body {
-    public let parameterEncoding: ParameterEncoding
-    public let params: Parameters
+    public let parameterEncoding: PParameterEncoding
+    public let params: PParameters
 
-    public init(parameterEncoding: ParameterEncoding, params: Parameters) {
+    public init(parameterEncoding: PParameterEncoding, params: PParameters) {
         self.parameterEncoding = parameterEncoding
         self.params = params
     }
@@ -102,6 +102,6 @@ public enum Method {
     connect
 }
 
-public enum ParameterEncoding {
+public enum PParameterEncoding {
     case url, json, form
 }

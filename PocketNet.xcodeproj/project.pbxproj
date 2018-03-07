@@ -21,10 +21,29 @@
 		0E633A141FEBCBF0004E4668 /* CustomSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E633A131FEBCBF0004E4668 /* CustomSessionDelegate.swift */; };
 		0E633A161FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E633A151FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift */; };
 		0E995725204D4CAC00FFB0EB /* PocketResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995724204D4CAC00FFB0EB /* PocketResult.swift */; };
+		0E995777204EF6A300FFB0EB /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99574A204EF6A300FFB0EB /* TaskDelegate.swift */; };
+		0E995778204EF6A300FFB0EB /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99574B204EF6A300FFB0EB /* MultipartFormData.swift */; };
+		0E995779204EF6A300FFB0EB /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99574C204EF6A300FFB0EB /* NetworkReachabilityManager.swift */; };
+		0E99577A204EF6A300FFB0EB /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99574D204EF6A300FFB0EB /* Timeline.swift */; };
+		0E99577B204EF6A300FFB0EB /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99574E204EF6A300FFB0EB /* DispatchQueue+Alamofire.swift */; };
+		0E99577C204EF6A300FFB0EB /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99574F204EF6A300FFB0EB /* Result.swift */; };
+		0E99577D204EF6A300FFB0EB /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995750204EF6A300FFB0EB /* ParameterEncoding.swift */; };
+		0E99577E204EF6A300FFB0EB /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995751204EF6A300FFB0EB /* AFError.swift */; };
+		0E99577F204EF6A300FFB0EB /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995752204EF6A300FFB0EB /* Validation.swift */; };
+		0E995780204EF6A300FFB0EB /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995753204EF6A300FFB0EB /* Notifications.swift */; };
+		0E995781204EF6A300FFB0EB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995754204EF6A300FFB0EB /* Response.swift */; };
+		0E995782204EF6A300FFB0EB /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995755204EF6A300FFB0EB /* Alamofire.swift */; };
+		0E995783204EF6A300FFB0EB /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995756204EF6A300FFB0EB /* Request.swift */; };
+		0E995784204EF6A300FFB0EB /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995757204EF6A300FFB0EB /* SessionManager.swift */; };
+		0E995785204EF6A300FFB0EB /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995758204EF6A300FFB0EB /* ResponseSerialization.swift */; };
+		0E995786204EF6A300FFB0EB /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E995759204EF6A300FFB0EB /* ServerTrustPolicy.swift */; };
+		0E995787204EF6A300FFB0EB /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99575A204EF6A300FFB0EB /* SessionDelegate.swift */; };
+		0EAB74AF204FE7400021F07E /* ReqresLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB74AC204FE7400021F07E /* ReqresLogging.swift */; };
+		0EAB74B0204FE7400021F07E /* ReqresDefaultLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB74AD204FE7400021F07E /* ReqresDefaultLogger.swift */; };
+		0EAB74B1204FE7400021F07E /* Reqres.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAB74AE204FE7400021F07E /* Reqres.swift */; };
+		0EAB74B7204FEAD20021F07E /* ReqresLicense in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB74B6204FEAD20021F07E /* ReqresLicense */; };
+		0EAB74B9204FEAF10021F07E /* AlamofireLicense in Resources */ = {isa = PBXBuildFile; fileRef = 0EAB74B8204FEAF00021F07E /* AlamofireLicense */; };
 		0ED1B8A61F9F610100D9BE0B /* PocketNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E13CA351F3325750078BCBF /* PocketNet.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		1854CF7E55FFE401718ACCFB /* Pods_PocketNetTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91F758F5F16C42CA6039628D /* Pods_PocketNetTests.framework */; };
-		B86463CC8928A1A8A829F201 /* Pods_PocketNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED1B8AB1F9F648700D9BE0B /* Pods_PocketNet.framework */; };
-		E31A7E5766D5FEDE14258270 /* Pods_PocketNet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C74EC6B9A7355ED45E03DCF /* Pods_PocketNet.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,17 +75,28 @@
 		0E633A131FEBCBF0004E4668 /* CustomSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSessionDelegate.swift; sourceTree = "<group>"; };
 		0E633A151FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomServerTrustPolicyManager.swift; sourceTree = "<group>"; };
 		0E995724204D4CAC00FFB0EB /* PocketResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PocketResult.swift; sourceTree = "<group>"; };
-		0ED1B8A51F9F60E200D9BE0B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ED1B8A91F9F63A700D9BE0B /* Pods_PocketNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PocketNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0ED1B8AB1F9F648700D9BE0B /* Pods_PocketNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_PocketNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		14703F22A2AF9B56D10BF3A2 /* Pods-PocketNetTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketNetTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketNetTests/Pods-PocketNetTests.release.xcconfig"; sourceTree = "<group>"; };
-		2C74EC6B9A7355ED45E03DCF /* Pods_PocketNet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketNet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43310A748C40960050DBF5CA /* Pods-PocketNetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketNetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketNetTests/Pods-PocketNetTests.debug.xcconfig"; sourceTree = "<group>"; };
-		78136B9A743A8D550241CC46 /* Pods-PocketNet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketNet.release.xcconfig"; path = "Pods/Target Support Files/Pods-PocketNet/Pods-PocketNet.release.xcconfig"; sourceTree = "<group>"; };
-		91F758F5F16C42CA6039628D /* Pods_PocketNetTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PocketNetTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C753D0F05CD3704DCEA70902 /* Pods-Net.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Net.release.xcconfig"; path = "Pods/Target Support Files/Pods-Net/Pods-Net.release.xcconfig"; sourceTree = "<group>"; };
-		CFE75273A5910C7C6E75DB1E /* Pods-PocketNet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PocketNet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PocketNet/Pods-PocketNet.debug.xcconfig"; sourceTree = "<group>"; };
-		DE42B6030DC156240966D25A /* Pods-Net.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Net.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Net/Pods-Net.debug.xcconfig"; sourceTree = "<group>"; };
+		0E99574A204EF6A300FFB0EB /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
+		0E99574B204EF6A300FFB0EB /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		0E99574C204EF6A300FFB0EB /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		0E99574D204EF6A300FFB0EB /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		0E99574E204EF6A300FFB0EB /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		0E99574F204EF6A300FFB0EB /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0E995750204EF6A300FFB0EB /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		0E995751204EF6A300FFB0EB /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
+		0E995752204EF6A300FFB0EB /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		0E995753204EF6A300FFB0EB /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		0E995754204EF6A300FFB0EB /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		0E995755204EF6A300FFB0EB /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		0E995756204EF6A300FFB0EB /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		0E995757204EF6A300FFB0EB /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		0E995758204EF6A300FFB0EB /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		0E995759204EF6A300FFB0EB /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		0E99575A204EF6A300FFB0EB /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		0EAB74AC204FE7400021F07E /* ReqresLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqresLogging.swift; sourceTree = "<group>"; };
+		0EAB74AD204FE7400021F07E /* ReqresDefaultLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReqresDefaultLogger.swift; sourceTree = "<group>"; };
+		0EAB74AE204FE7400021F07E /* Reqres.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reqres.swift; sourceTree = "<group>"; };
+		0EAB74B6204FEAD20021F07E /* ReqresLicense */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ReqresLicense; sourceTree = "<group>"; };
+		0EAB74B8204FEAF00021F07E /* AlamofireLicense */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AlamofireLicense; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,8 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E31A7E5766D5FEDE14258270 /* Pods_PocketNet.framework in Frameworks */,
-				B86463CC8928A1A8A829F201 /* Pods_PocketNet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,7 +112,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED1B8A61F9F610100D9BE0B /* PocketNet.framework in Frameworks */,
-				1854CF7E55FFE401718ACCFB /* Pods_PocketNetTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +121,10 @@
 		0E13CA2B1F3325750078BCBF = {
 			isa = PBXGroup;
 			children = (
+				0E99573E204EF67000FFB0EB /* StaticPods */,
 				0E13CA371F3325750078BCBF /* PocketNet */,
 				0E13CA421F3325760078BCBF /* PocketNetTests */,
 				0E13CA361F3325750078BCBF /* Products */,
-				2B56F537FFB3BDF1B003F9F5 /* Pods */,
 				999C84A647339EACA2A0FC49 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -157,27 +184,70 @@
 			path = PocketNetAlamoFire;
 			sourceTree = "<group>";
 		};
-		2B56F537FFB3BDF1B003F9F5 /* Pods */ = {
+		0E99573E204EF67000FFB0EB /* StaticPods */ = {
 			isa = PBXGroup;
 			children = (
-				DE42B6030DC156240966D25A /* Pods-Net.debug.xcconfig */,
-				C753D0F05CD3704DCEA70902 /* Pods-Net.release.xcconfig */,
-				CFE75273A5910C7C6E75DB1E /* Pods-PocketNet.debug.xcconfig */,
-				78136B9A743A8D550241CC46 /* Pods-PocketNet.release.xcconfig */,
-				43310A748C40960050DBF5CA /* Pods-PocketNetTests.debug.xcconfig */,
-				14703F22A2AF9B56D10BF3A2 /* Pods-PocketNetTests.release.xcconfig */,
+				0EAB74AB204FE7400021F07E /* Reqres */,
+				0E995747204EF6A300FFB0EB /* Alamofire */,
 			);
-			name = Pods;
+			path = StaticPods;
+			sourceTree = "<group>";
+		};
+		0E995747204EF6A300FFB0EB /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				0EAB74B8204FEAF00021F07E /* AlamofireLicense */,
+				0E995749204EF6A300FFB0EB /* Source */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		0E995749204EF6A300FFB0EB /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0E99574A204EF6A300FFB0EB /* TaskDelegate.swift */,
+				0E99574B204EF6A300FFB0EB /* MultipartFormData.swift */,
+				0E99574C204EF6A300FFB0EB /* NetworkReachabilityManager.swift */,
+				0E99574D204EF6A300FFB0EB /* Timeline.swift */,
+				0E99574E204EF6A300FFB0EB /* DispatchQueue+Alamofire.swift */,
+				0E99574F204EF6A300FFB0EB /* Result.swift */,
+				0E995750204EF6A300FFB0EB /* ParameterEncoding.swift */,
+				0E995751204EF6A300FFB0EB /* AFError.swift */,
+				0E995752204EF6A300FFB0EB /* Validation.swift */,
+				0E995753204EF6A300FFB0EB /* Notifications.swift */,
+				0E995754204EF6A300FFB0EB /* Response.swift */,
+				0E995755204EF6A300FFB0EB /* Alamofire.swift */,
+				0E995756204EF6A300FFB0EB /* Request.swift */,
+				0E995757204EF6A300FFB0EB /* SessionManager.swift */,
+				0E995758204EF6A300FFB0EB /* ResponseSerialization.swift */,
+				0E995759204EF6A300FFB0EB /* ServerTrustPolicy.swift */,
+				0E99575A204EF6A300FFB0EB /* SessionDelegate.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0EAB74AB204FE7400021F07E /* Reqres */ = {
+			isa = PBXGroup;
+			children = (
+				0EAB74B6204FEAD20021F07E /* ReqresLicense */,
+				0EAB74B4204FE7BE0021F07E /* Source */,
+			);
+			path = Reqres;
+			sourceTree = "<group>";
+		};
+		0EAB74B4204FE7BE0021F07E /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0EAB74AC204FE7400021F07E /* ReqresLogging.swift */,
+				0EAB74AD204FE7400021F07E /* ReqresDefaultLogger.swift */,
+				0EAB74AE204FE7400021F07E /* Reqres.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		999C84A647339EACA2A0FC49 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0ED1B8AB1F9F648700D9BE0B /* Pods_PocketNet.framework */,
-				0ED1B8A91F9F63A700D9BE0B /* Pods_PocketNet.framework */,
-				0ED1B8A51F9F60E200D9BE0B /* Alamofire.framework */,
-				2C74EC6B9A7355ED45E03DCF /* Pods_PocketNet.framework */,
-				91F758F5F16C42CA6039628D /* Pods_PocketNetTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,12 +270,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E13CA491F3325760078BCBF /* Build configuration list for PBXNativeTarget "PocketNet" */;
 			buildPhases = (
-				DFFCBE328139FAE9DC91C971 /* [CP] Check Pods Manifest.lock */,
 				0E13CA301F3325750078BCBF /* Sources */,
 				0E13CA311F3325750078BCBF /* Frameworks */,
 				0E13CA321F3325750078BCBF /* Headers */,
 				0E13CA331F3325750078BCBF /* Resources */,
-				F33A9ED1FAB055B3ED8E479A /* [CP] Copy Pods Resources */,
 				0E67D92C1F8E5CC000A1B85C /* SwiftLint */,
 			);
 			buildRules = (
@@ -221,12 +289,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0E13CA4C1F3325760078BCBF /* Build configuration list for PBXNativeTarget "PocketNetTests" */;
 			buildPhases = (
-				2B3BCD42D465774101783870 /* [CP] Check Pods Manifest.lock */,
 				0E13CA3A1F3325760078BCBF /* Sources */,
 				0E13CA3B1F3325760078BCBF /* Frameworks */,
 				0E13CA3C1F3325760078BCBF /* Resources */,
-				38BD240C3B53A0FFDEDA40BA /* [CP] Embed Pods Frameworks */,
-				D3A041AE38C029D7850EC62C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -281,6 +346,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAB74B7204FEAD20021F07E /* ReqresLicense in Resources */,
+				0EAB74B9204FEAF10021F07E /* AlamofireLicense in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,93 +373,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint #autocorrect\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		2B3BCD42D465774101783870 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PocketNetTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		38BD240C3B53A0FFDEDA40BA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PocketNetTests/Pods-PocketNetTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/ResponseDetective/ResponseDetective.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ResponseDetective.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketNetTests/Pods-PocketNetTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D3A041AE38C029D7850EC62C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketNetTests/Pods-PocketNetTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DFFCBE328139FAE9DC91C971 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-PocketNet-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F33A9ED1FAB055B3ED8E479A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PocketNet/Pods-PocketNet-resources.sh\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\n    echo \"swiftLint deactivated\"BodyDeserializer#swiftlint #autocorrect\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -401,18 +382,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E99577C204EF6A300FFB0EB /* Result.swift in Sources */,
+				0E99577A204EF6A300FFB0EB /* Timeline.swift in Sources */,
+				0E995780204EF6A300FFB0EB /* Notifications.swift in Sources */,
 				0E633A141FEBCBF0004E4668 /* CustomSessionDelegate.swift in Sources */,
 				0E13CA5E1F3325950078BCBF /* NetRequest.swift in Sources */,
+				0E995778204EF6A300FFB0EB /* MultipartFormData.swift in Sources */,
 				0E13CA631F348C500078BCBF /* NetSupport.swift in Sources */,
 				0E633A161FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift in Sources */,
 				0E13CA621F348C500078BCBF /* Convertible.swift in Sources */,
 				0E13CA5B1F3325950078BCBF /* PocketNetAlamofire.swift in Sources */,
 				0E13CA581F3325950078BCBF /* FormData.swift in Sources */,
 				0E13CA5C1F3325950078BCBF /* NetError.swift in Sources */,
+				0E995784204EF6A300FFB0EB /* SessionManager.swift in Sources */,
+				0E995785204EF6A300FFB0EB /* ResponseSerialization.swift in Sources */,
+				0E995783204EF6A300FFB0EB /* Request.swift in Sources */,
 				0E13CA591F3325950078BCBF /* PocketNet.swift in Sources */,
+				0E995779204EF6A300FFB0EB /* NetworkReachabilityManager.swift in Sources */,
+				0EAB74AF204FE7400021F07E /* ReqresLogging.swift in Sources */,
+				0E99577F204EF6A300FFB0EB /* Validation.swift in Sources */,
 				0E13CA5A1F3325950078BCBF /* PocketAlamofireAdapter.swift in Sources */,
+				0E995786204EF6A300FFB0EB /* ServerTrustPolicy.swift in Sources */,
+				0E99577D204EF6A300FFB0EB /* ParameterEncoding.swift in Sources */,
 				0E995725204D4CAC00FFB0EB /* PocketResult.swift in Sources */,
+				0E995782204EF6A300FFB0EB /* Alamofire.swift in Sources */,
+				0E995787204EF6A300FFB0EB /* SessionDelegate.swift in Sources */,
+				0EAB74B1204FE7400021F07E /* Reqres.swift in Sources */,
+				0E99577B204EF6A300FFB0EB /* DispatchQueue+Alamofire.swift in Sources */,
+				0E99577E204EF6A300FFB0EB /* AFError.swift in Sources */,
+				0E995781204EF6A300FFB0EB /* Response.swift in Sources */,
 				0E13CA5D1F3325950078BCBF /* NetworkResponse.swift in Sources */,
+				0EAB74B0204FE7400021F07E /* ReqresDefaultLogger.swift in Sources */,
+				0E995777204EF6A300FFB0EB /* TaskDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,13 +551,13 @@
 		};
 		0E13CA4A1F3325760078BCBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CFE75273A5910C7C6E75DB1E /* Pods-PocketNet.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PocketNet/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -570,13 +571,13 @@
 		};
 		0E13CA4B1F3325760078BCBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78136B9A743A8D550241CC46 /* Pods-PocketNet.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = PocketNet/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -590,7 +591,6 @@
 		};
 		0E13CA4D1F3325760078BCBF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43310A748C40960050DBF5CA /* Pods-PocketNetTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = PocketNetTests/Info.plist;
@@ -603,7 +603,6 @@
 		};
 		0E13CA4E1F3325760078BCBF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14703F22A2AF9B56D10BF3A2 /* Pods-PocketNetTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				INFOPLIST_FILE = PocketNetTests/Info.plist;
