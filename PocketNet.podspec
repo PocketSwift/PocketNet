@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary      = "Net with Alamofire implementation"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "PocketSwift" => "https://github.com/PocketSwift" }
-  s.source       = { :git => "https://github.com/PocketSwift/PocketNet.git", :tag => "1.3.2_static" }
+  s.source       = { :git => "https://github.com/PocketSwift/PocketNet.git", :tag => "1.3.2.1" }
   s.static_framework = true
   s.source_files = 'Classes', 'PocketNet/**/*.swift', 'StaticPods/**/*.swift'
   s.platform     = :ios, '9.0'
