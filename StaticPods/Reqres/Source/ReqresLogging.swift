@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 public enum LogLevel {
     case none
     case light
