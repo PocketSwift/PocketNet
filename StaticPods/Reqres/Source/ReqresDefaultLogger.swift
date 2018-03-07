@@ -6,6 +6,8 @@
 //
 //
 
+import Foundation
+
 open class ReqresDefaultLogger: ReqresLogging {
 
     private let dateFormatter: DateFormatter = {
@@ -38,14 +40,14 @@ open class ReqresDefaultNSLogger: ReqresLogging {
     open var logLevel: LogLevel = .verbose
 
     open func logVerbose(_ message: String) {
-        NSLog(message)
+        print(message)
     }
 
     open func logLight(_ message: String) {
-        NSLog(message)
+        print(message)
     }
 
     open func logError(_ message: String) {
-        NSLog(message)
+        print(message)
     }
 }
