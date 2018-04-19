@@ -88,11 +88,29 @@ public class PocketNetAlamofire: PocketNet {
     }
 
     public func cancelTask(identifier: Int) {
-        self.manager.session.getAllTasks { (tasks: [URLSessionTask]) in
-            if let task = tasks.filter({ (task: URLSessionTask) -> Bool in
-                return task.taskIdentifier == identifier
-            }).first, task.state == .running {
-                task.cancel()
+        self.manager.session.getTasksWithCompletionHandler  { (sessionDataTask, uploadData, downloadData) in
+            var completed = false
+            sessionDataTask.forEach {
+                if $0.taskIdentifier == identifier && $0.state == .running {
+                    $0.cancel()
+                    completed = true
+                    return
+                }
+            }
+            if completed { return }
+            downloadData.forEach {
+                if $0.taskIdentifier == identifier && $0.state == .running {
+                    $0.cancel()
+                    completed = true
+                    return
+                }
+            }
+            if completed { return }
+            uploadData.forEach {
+                if $0.taskIdentifier == identifier && $0.state == .running {
+                    $0.cancel()
+                    return
+                }
             }
         }
     }
