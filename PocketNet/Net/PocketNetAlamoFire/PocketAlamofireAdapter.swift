@@ -92,8 +92,8 @@ public class PocketAlamofireAdapter {
             let key = headerKey as! String
             let value = headerValue as! String
             adaptedHeaders[key] = value
-            completion(PocketResult.success(NetworkResponse(statusCode: status, message: responseString, headers: adaptedHeaders)))
         }
+        completion(PocketResult.success(NetworkResponse(statusCode: status, message: responseString, headers: adaptedHeaders)))
     }
     
     internal static func processErrorResponse(_ error: Error?, completion: @escaping ((ResultNetworkResponse) -> Void)) {
