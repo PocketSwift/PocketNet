@@ -1,19 +1,19 @@
 import Foundation
 
 public class PocketAlamofireAdapter {
-
+    
     public static func adaptRequest(_ request: NetRequest, manager: SessionManager, completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
         let afResponse = manager.request(
-                request.url,
-                method: self.transformMethod(request.method),
-                parameters: request.body.params,
-                encoding: self.transformParameterEncoding(request.body.parameterEncoding),
-                headers: request.headers).validate().responseString { afResponse in
-                    guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
-                        processErrorResponse(afResponse.error, completion: completion)
-                        return
-                    }
-                    processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
+            request.url,
+            method: self.transformMethod(request.method),
+            parameters: request.body.params,
+            encoding: self.transformParameterEncoding(request.body.parameterEncoding),
+            headers: request.headers).validate().responseString { afResponse in
+                guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
+                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode , completion: completion)
+                    return
+                }
+                processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
         }
         return (afResponse.task != nil) ? afResponse.task!.taskIdentifier : -1
     }
@@ -48,7 +48,7 @@ public class PocketAlamofireAdapter {
                 })
                 upload.validate().responseString { afResponse in
                     guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
-                        processErrorResponse(afResponse.error, completion: completion)
+                        processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, completion: completion)
                         return
                     }
                     processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
@@ -70,18 +70,18 @@ public class PocketAlamofireAdapter {
         } catch {
             return -1
         }
-
+        
         let downloadRequest = manager.download(urlRequest)
             .downloadProgress { progress in
                 actualProgress(progress.fractionCompleted)
             }
             .validate().responseString { afResponse in
                 guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
-                    processErrorResponse(afResponse.error, completion: completion)
+                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, completion: completion)
                     return
                 }
                 processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
-            }
+        }
         return (downloadRequest.task != nil) ? downloadRequest.task!.taskIdentifier : -1
         
     }
@@ -96,16 +96,19 @@ public class PocketAlamofireAdapter {
         completion(PocketResult.success(NetworkResponse(statusCode: status, message: responseString, headers: adaptedHeaders)))
     }
     
-    internal static func processErrorResponse(_ error: Error?, completion: @escaping ((ResultNetworkResponse) -> Void)) {
-        guard let error = error else { return }
+    internal static func processErrorResponse(_ error: Error?, statusCode: Int?, completion: @escaping ((ResultNetworkResponse) -> Void)) {
+        guard let error = error else {
+            completion(PocketResult.failure(NetError.error(statusErrorCode: -1, errorMessage: "Unknown error")))
+            return
+        }
         switch error._code {
         case NSURLErrorNotConnectedToInternet:
             completion(PocketResult.failure(NetError.noConnection))
         default:
-            completion(PocketResult.failure(NetError.error(statusErrorCode: error._code, errorMessage: error.localizedDescription)))
+            completion(PocketResult.failure(NetError.error(statusErrorCode: statusCode ?? error._code, errorMessage: error.localizedDescription)))
         }
     }
-
+    
     internal static func transformMethod(_ method: Method) -> HTTPMethod {
         switch method {
         case .delete:
@@ -128,7 +131,7 @@ public class PocketAlamofireAdapter {
             return HTTPMethod.connect
         }
     }
-
+    
     internal static func transformParameterEncoding(_ parameterEncoding: PParameterEncoding) -> ParameterEncoding {
         switch parameterEncoding {
         case .url:
