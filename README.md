@@ -24,7 +24,7 @@ Elegant net abstraction layer written in Swift 4.1, we provide an integration wi
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1+ is required to build PocketNet 1.4.3
+> CocoaPods 1.1+ is required to build PocketNet 1.5.0
 
 To integrate PocketNet into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -62,14 +62,24 @@ let request = NetRequest.Builder()
                 .shouldCache(false)
                 .build()
 
-netSupport.netJsonMappableRequest(request, completion: {(result: Result<ConvertibleObject, Error>) in
+netSupport.netJsonMappableRequest(request, completion: {(result: Result<DecodableObject, Error>) in
 	switch result {
-	case .success(let convertibleObject):
-		/// do something with convertibleObject
+	case .success(let decodableObject):
+		/// do something with decodableObject
 	case .failure(let error):
 	    /// do something with error
 	}
 })
+
+netSupport.netArrayJsonMappableRequest(request, completion: {(result: Result<[DecodableObject], Error>) in
+    switch result {
+    case .success(let decodableObject):
+        /// do something with decodableObject
+    case .failure(let error):
+        /// do something with error
+    }
+})
+
 ```
 
 ## Authors
