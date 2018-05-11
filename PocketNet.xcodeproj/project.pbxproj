@@ -16,7 +16,6 @@
 		0E13CA5C1F3325950078BCBF /* NetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA551F3325950078BCBF /* NetError.swift */; };
 		0E13CA5D1F3325950078BCBF /* NetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA561F3325950078BCBF /* NetworkResponse.swift */; };
 		0E13CA5E1F3325950078BCBF /* NetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA571F3325950078BCBF /* NetRequest.swift */; };
-		0E13CA621F348C500078BCBF /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA5F1F348C500078BCBF /* Convertible.swift */; };
 		0E13CA631F348C500078BCBF /* NetSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E13CA601F348C500078BCBF /* NetSupport.swift */; };
 		0E633A141FEBCBF0004E4668 /* CustomSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E633A131FEBCBF0004E4668 /* CustomSessionDelegate.swift */; };
 		0E633A161FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E633A151FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift */; };
@@ -70,7 +69,6 @@
 		0E13CA551F3325950078BCBF /* NetError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetError.swift; sourceTree = "<group>"; };
 		0E13CA561F3325950078BCBF /* NetworkResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResponse.swift; sourceTree = "<group>"; };
 		0E13CA571F3325950078BCBF /* NetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetRequest.swift; sourceTree = "<group>"; };
-		0E13CA5F1F348C500078BCBF /* Convertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
 		0E13CA601F348C500078BCBF /* NetSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetSupport.swift; sourceTree = "<group>"; };
 		0E633A131FEBCBF0004E4668 /* CustomSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSessionDelegate.swift; sourceTree = "<group>"; };
 		0E633A151FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomServerTrustPolicyManager.swift; sourceTree = "<group>"; };
@@ -162,7 +160,6 @@
 			children = (
 				0E995724204D4CAC00FFB0EB /* PocketResult.swift */,
 				0E13CA511F3325950078BCBF /* PocketNet.swift */,
-				0E13CA5F1F348C500078BCBF /* Convertible.swift */,
 				0E13CA601F348C500078BCBF /* NetSupport.swift */,
 				0E13CA571F3325950078BCBF /* NetRequest.swift */,
 				0E13CA501F3325950078BCBF /* FormData.swift */,
@@ -390,7 +387,6 @@
 				0E995778204EF6A300FFB0EB /* MultipartFormData.swift in Sources */,
 				0E13CA631F348C500078BCBF /* NetSupport.swift in Sources */,
 				0E633A161FEBCC43004E4668 /* CustomServerTrustPolicyManager.swift in Sources */,
-				0E13CA621F348C500078BCBF /* Convertible.swift in Sources */,
 				0E13CA5B1F3325950078BCBF /* PocketNetAlamofire.swift in Sources */,
 				0E13CA581F3325950078BCBF /* FormData.swift in Sources */,
 				0E13CA5C1F3325950078BCBF /* NetError.swift in Sources */,
