@@ -15,6 +15,10 @@ open class Reqres: URLProtocol, URLSessionDelegate {
     var dataTask: URLSessionDataTask?
     var newRequest: NSMutableURLRequest?
 
+    open static var sessionDelegate: URLSessionDelegate?
+    
+    open static var policyManager: ServerTrustPolicyManager?
+    
     open static var allowUTF8Emoji: Bool = true
 
     open static var logger: ReqresLogging = ReqresDefaultLogger()
@@ -58,7 +62,8 @@ open class Reqres: URLProtocol, URLSessionDelegate {
         URLProtocol.setProperty(true, forKey: ReqresRequestHandledKey, in: newRequest!)
         URLProtocol.setProperty(Date(), forKey: ReqresRequestTimeKey, in: newRequest!)
 
-        let session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
+        let session = URLSession(configuration: .default, delegate: Reqres.sessionDelegate ?? self, delegateQueue: nil)
+        session.serverTrustPolicyManager = Reqres.policyManager
         dataTask = session.dataTask(with: request) { [weak self] data, response, error in
             guard let `self` = self else { return }
 
