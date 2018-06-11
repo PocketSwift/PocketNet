@@ -30,7 +30,7 @@ public class PocketNetAlamofire: PocketNet {
     let reachabilityManager = NetworkReachabilityManager(host: "www.apple.com")!
     let sessionDelegate: SessionDelegate!
 
-    public init(requestTimeout: TimeInterval = 20.0, pinningSSLCertURL: URL? = nil, domain: String? = nil, extraServerTrustPolicies: [String: ServerTrustPolicy]) {
+    public init(requestTimeout: TimeInterval = 20.0, pinningSSLCertURL: URL? = nil, domain: String? = nil, serverTrustPolicies: [String: ServerTrustPolicy] = [:]) {
         var configuration = URLSessionConfiguration.default
         #if DEBUG
         configuration = Reqres.defaultSessionConfiguration()
@@ -46,14 +46,14 @@ public class PocketNetAlamofire: PocketNet {
             ]
             sessionDelegate = customSession
             Reqres.sessionDelegate = sessionDelegate
-            serverTrustPolicies = serverTrustPolicies.merging(extraServerTrustPolicies, uniquingKeysWith: { (first, _) in first })
+            serverTrustPolicies = serverTrustPolicies.merging(serverTrustPolicies, uniquingKeysWith: { (first, _) in first })
             let policyManager = CustomServerTrustPolicyManager(policies: serverTrustPolicies)
             Reqres.policyManager = policyManager
             self.manager = SessionManager(configuration: configuration, delegate: customSession, serverTrustPolicyManager: policyManager)
         } else {
             sessionDelegate = SessionDelegate()
             Reqres.sessionDelegate = sessionDelegate
-            let policyManager = ServerTrustPolicyManager(policies: extraServerTrustPolicies)
+            let policyManager = ServerTrustPolicyManager(policies: serverTrustPolicies)
             Reqres.policyManager = policyManager
             self.manager = SessionManager(configuration: configuration, delegate: sessionDelegate, serverTrustPolicyManager: policyManager)
         }
