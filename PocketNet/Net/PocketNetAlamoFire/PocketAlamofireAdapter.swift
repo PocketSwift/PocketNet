@@ -10,7 +10,11 @@ public class PocketAlamofireAdapter {
             encoding: self.transformParameterEncoding(request.body.parameterEncoding),
             headers: request.headers).validate().responseString { afResponse in
                 guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
-                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode , completion: completion)
+                    var bodyString: String?
+                    if let data = afResponse.data {
+                        bodyString = String(data: data, encoding: String.Encoding.utf8)
+                    }
+                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, bodyString: bodyString, completion: completion)
                     return
                 }
                 processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
@@ -48,7 +52,11 @@ public class PocketAlamofireAdapter {
                 })
                 upload.validate().responseString { afResponse in
                     guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
-                        processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, completion: completion)
+                        var bodyString: String?
+                        if let data = afResponse.data {
+                            bodyString = String(data: data, encoding: String.Encoding.utf8)
+                        }
+                        processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, bodyString: bodyString, completion: completion)
                         return
                     }
                     processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
@@ -77,7 +85,11 @@ public class PocketAlamofireAdapter {
             }
             .validate().responseString { afResponse in
                 guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
-                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, completion: completion)
+                    var bodyString: String?
+                    if let data = afResponse.resumeData{
+                        bodyString = String(data: data, encoding: String.Encoding.utf8)
+                    }
+                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, bodyString: bodyString, completion: completion)
                     return
                 }
                 processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
@@ -96,16 +108,16 @@ public class PocketAlamofireAdapter {
         completion(PocketResult.success(NetworkResponse(statusCode: status, message: responseString, headers: adaptedHeaders)))
     }
     
-    internal static func processErrorResponse(_ error: Error?, statusCode: Int?, completion: @escaping ((ResultNetworkResponse) -> Void)) {
+    internal static func processErrorResponse(_ error: Error?, statusCode: Int?, bodyString: String?, completion: @escaping ((ResultNetworkResponse) -> Void)) {
         guard let error = error else {
-            completion(PocketResult.failure(NetError.error(statusErrorCode: -1, errorMessage: "Unknown error")))
+            completion(PocketResult.failure(NetError.error(statusErrorCode: -1, errorMessage: "Unknown error", errorStringObject: bodyString)))
             return
         }
         switch error._code {
         case NSURLErrorNotConnectedToInternet:
             completion(PocketResult.failure(NetError.noConnection))
         default:
-            completion(PocketResult.failure(NetError.error(statusErrorCode: statusCode ?? error._code, errorMessage: error.localizedDescription)))
+            completion(PocketResult.failure(NetError.error(statusErrorCode: statusCode ?? error._code, errorMessage: error.localizedDescription, errorStringObject: bodyString)))
         }
     }
     
