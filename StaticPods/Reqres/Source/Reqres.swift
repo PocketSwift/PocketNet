@@ -15,13 +15,13 @@ open class Reqres: URLProtocol, URLSessionDelegate {
     var dataTask: URLSessionDataTask?
     var newRequest: NSMutableURLRequest?
 
-    open static var sessionDelegate: URLSessionDelegate?
+    public static var sessionDelegate: URLSessionDelegate?
     
-    open static var policyManager: ServerTrustPolicyManager?
+    public static var policyManager: ServerTrustPolicyManager?
     
-    open static var allowUTF8Emoji: Bool = true
+    public static var allowUTF8Emoji: Bool = true
 
-    open static var logger: ReqresLogging = ReqresDefaultLogger()
+    public static var logger: ReqresLogging = ReqresDefaultLogger()
 
     open class func register() {
         URLProtocol.registerClass(self)
