@@ -1,7 +1,7 @@
 //
 //  Response.swift
 //
-//  Copyright (c) 2014-2017 Alamofire Software Foundation (http://alamofire.org/)
+//  Copyright (c) 2014 Alamofire Software Foundation (http://alamofire.org/)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -82,7 +82,7 @@ public struct DataResponse<Value> {
     public let data: Data?
 
     /// The result of response serialization.
-    public let result: Result<Value>
+    internal let result: Result<Value>
 
     /// The timeline of the complete lifecycle of the request.
     public let timeline: Timeline
@@ -104,7 +104,7 @@ public struct DataResponse<Value> {
     /// - parameter timeline: The timeline of the complete lifecycle of the `Request`. Defaults to `Timeline()`.
     ///
     /// - returns: The new `DataResponse` instance.
-    public init(
+    internal init(
         request: URLRequest?,
         response: HTTPURLResponse?,
         data: Data?,
@@ -328,7 +328,7 @@ public struct DownloadResponse<Value> {
     public let resumeData: Data?
 
     /// The result of response serialization.
-    public let result: Result<Value>
+    internal let result: Result<Value>
 
     /// The timeline of the complete lifecycle of the request.
     public let timeline: Timeline
@@ -352,7 +352,7 @@ public struct DownloadResponse<Value> {
     /// - parameter timeline:       The timeline of the complete lifecycle of the `Request`. Defaults to `Timeline()`.
     ///
     /// - returns: The new `DownloadResponse` instance.
-    public init(
+    internal init(
         request: URLRequest?,
         response: HTTPURLResponse?,
         temporaryURL: URL?,
