@@ -368,9 +368,9 @@ extension Request {
 
         var convertedEncoding = encoding
 
-        if let encodingName = response?.textEncodingName as CFString!, convertedEncoding == nil {
+        if let encodingNameString = response?.textEncodingName, convertedEncoding == nil {
             convertedEncoding = String.Encoding(rawValue: CFStringConvertEncodingToNSStringEncoding(
-                CFStringConvertIANACharSetNameToEncoding(encodingName))
+                CFStringConvertIANACharSetNameToEncoding(encodingNameString as CFString))
             )
         }
 

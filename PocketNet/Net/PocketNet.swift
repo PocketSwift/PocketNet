@@ -1,6 +1,6 @@
 import Foundation
 
-public typealias ResultNetworkResponse = PocketResult<NetworkResponse, NetError>
+public typealias ResultNetworkResponse = Swift.Result<NetworkResponse, NetError>
 
 public enum NetworkReachabilityStatus {
     case unknown

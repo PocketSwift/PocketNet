@@ -8,7 +8,7 @@
 
 ## PocketNet
 
-Elegant net abstraction layer written in Swift 4.1, we provide an integration with Alamofire.
+Elegant net abstraction layer written in Swift 5.0, we provide an integration with Alamofire.
 
 ## Requirements
 
@@ -24,7 +24,7 @@ Elegant net abstraction layer written in Swift 4.1, we provide an integration wi
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1+ is required to build PocketNet 1.9.0
+> CocoaPods 1.1+ is required to build PocketNet 2.0.0
 
 To integrate PocketNet into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -97,7 +97,6 @@ netSupport.netArrayJsonMappableRequest(request, completion: {(result: Result<[De
 
 * [Alamofire][1]
 * [Reqres][2]
-* [Result][3]
 
 
 ## License
@@ -107,4 +106,3 @@ Net is available under the MIT license. See the LICENSE file for more info.
 
 [1]: https://github.com/Alamofire/Alamofire
 [2]: https://github.com/AckeeCZ/Reqres
-[3]: https://github.com/antitypical/Result

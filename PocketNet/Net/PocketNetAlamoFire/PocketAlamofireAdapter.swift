@@ -63,7 +63,7 @@ public class PocketAlamofireAdapter {
                 }
             case .failure:
                 group.leave()
-                completion(PocketResult.failure(NetError.encodingError))
+                completion(Swift.Result.failure(NetError.encodingError))
             }
         })
         group.wait()
@@ -105,19 +105,19 @@ public class PocketAlamofireAdapter {
             let value = headerValue as! String
             adaptedHeaders[key] = value
         }
-        completion(PocketResult.success(NetworkResponse(statusCode: status, message: responseString, headers: adaptedHeaders)))
+        completion(Swift.Result.success(NetworkResponse(statusCode: status, message: responseString, headers: adaptedHeaders)))
     }
     
     internal static func processErrorResponse(_ error: Error?, statusCode: Int?, bodyString: String?, completion: @escaping ((ResultNetworkResponse) -> Void)) {
         guard let error = error else {
-            completion(PocketResult.failure(NetError.error(statusErrorCode: -1, errorMessage: "Unknown error", errorStringObject: bodyString)))
+            completion(Swift.Result.failure(NetError.error(statusErrorCode: -1, errorMessage: "Unknown error", errorStringObject: bodyString)))
             return
         }
         switch error._code {
         case NSURLErrorNotConnectedToInternet:
-            completion(PocketResult.failure(NetError.noConnection))
+            completion(Swift.Result.failure(NetError.noConnection))
         default:
-            completion(PocketResult.failure(NetError.error(statusErrorCode: statusCode ?? error._code, errorMessage: error.localizedDescription, errorStringObject: bodyString)))
+            completion(Swift.Result.failure(NetError.error(statusErrorCode: statusCode ?? error._code, errorMessage: error.localizedDescription, errorStringObject: bodyString)))
         }
     }
     
