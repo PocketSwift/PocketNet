@@ -1,7 +1,7 @@
 import Foundation
 
 public enum NetError: Error {
-    case error(statusErrorCode: Int, errorMessage: String, errorStringObject: String?)
+    case error(statusErrorCode: Int, errorMessage: String, errorStringObject: String?, headers: [String : String]?)
     case noConnection
     case emptyResponse
     case mappingError

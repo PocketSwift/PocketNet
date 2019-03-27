@@ -14,7 +14,7 @@ public class PocketAlamofireAdapter {
                     if let data = afResponse.data {
                         bodyString = String(data: data, encoding: String.Encoding.utf8)
                     }
-                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, bodyString: bodyString, completion: completion)
+                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, responseHeaders: afResponse.response?.allHeaderFields, bodyString: bodyString, completion: completion)
                     return
                 }
                 processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
@@ -56,7 +56,7 @@ public class PocketAlamofireAdapter {
                         if let data = afResponse.data {
                             bodyString = String(data: data, encoding: String.Encoding.utf8)
                         }
-                        processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, bodyString: bodyString, completion: completion)
+                        processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, responseHeaders: afResponse.response?.allHeaderFields, bodyString: bodyString, completion: completion)
                         return
                     }
                     processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
@@ -89,36 +89,39 @@ public class PocketAlamofireAdapter {
                     if let data = afResponse.resumeData{
                         bodyString = String(data: data, encoding: String.Encoding.utf8)
                     }
-                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, bodyString: bodyString, completion: completion)
+                    processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, responseHeaders: afResponse.response?.allHeaderFields, bodyString: bodyString, completion: completion)
                     return
                 }
                 processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
         }
         return (downloadRequest.task != nil) ? downloadRequest.task!.taskIdentifier : -1
-        
     }
     
     internal static func processSuccessResponseString(_ responseString: String, responseHeaders: [AnyHashable: Any], status: Int, completion: @escaping ((ResultNetworkResponse) -> Void)) {
-        var adaptedHeaders = [String: String]()
-        for (headerKey, headerValue) in responseHeaders {
-            let key = headerKey as! String
-            let value = headerValue as! String
-            adaptedHeaders[key] = value
-        }
-        completion(Swift.Result.success(NetworkResponse(statusCode: status, message: responseString, headers: adaptedHeaders)))
+        completion(Swift.Result.success(NetworkResponse(statusCode: status, message: responseString, headers: adaptHeaders(responseHeaders))))
     }
     
-    internal static func processErrorResponse(_ error: Error?, statusCode: Int?, bodyString: String?, completion: @escaping ((ResultNetworkResponse) -> Void)) {
+    internal static func processErrorResponse(_ error: Error?, statusCode: Int?, responseHeaders: [AnyHashable : Any]?, bodyString: String?, completion: @escaping ((ResultNetworkResponse) -> Void)) {
         guard let error = error else {
-            completion(Swift.Result.failure(NetError.error(statusErrorCode: -1, errorMessage: "Unknown error", errorStringObject: bodyString)))
+            completion(Swift.Result.failure(NetError.error(statusErrorCode: -1, errorMessage: "Unknown error", errorStringObject: bodyString, headers: adaptHeaders(responseHeaders))))
             return
         }
         switch error._code {
         case NSURLErrorNotConnectedToInternet:
             completion(Swift.Result.failure(NetError.noConnection))
         default:
-            completion(Swift.Result.failure(NetError.error(statusErrorCode: statusCode ?? error._code, errorMessage: error.localizedDescription, errorStringObject: bodyString)))
+            completion(Swift.Result.failure(NetError.error(statusErrorCode: statusCode ?? error._code, errorMessage: error.localizedDescription, errorStringObject: bodyString, headers: adaptHeaders(responseHeaders))))
         }
+    }
+    
+    internal static func adaptHeaders(_ headers: [AnyHashable: Any]?) -> [String: String] {
+        var adaptedHeaders = [String: String]()
+        for (headerKey, headerValue) in headers ?? [:] {
+            let key = headerKey as! String
+            let value = headerValue as! String
+            adaptedHeaders[key] = value
+        }
+        return adaptedHeaders
     }
     
     internal static func transformMethod(_ method: Method) -> HTTPMethod {

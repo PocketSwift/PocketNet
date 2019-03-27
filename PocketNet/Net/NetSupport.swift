@@ -40,7 +40,7 @@ public extension NetSupport {
                 completion(Swift.Result.failure(.mappingError), nil)
             case .noConnection:
                 completion(Swift.Result.failure(.noConnection), nil)
-            case .error(let statusErrorCode, let errorMessage, let errorStringObject):
+            case .error(let statusErrorCode, let errorMessage, let errorStringObject, _):
                 var errorObject: S?
                 if let stringToData = errorStringObject, let data: Data = stringToData.data(using: String.Encoding.utf8), let object: S = try? JSONDecoder().decode(S.self, from: data) {
                     errorObject = object
@@ -77,7 +77,7 @@ public extension NetSupport {
                 completion(Swift.Result.failure(.mappingError), nil)
             case .noConnection:
                 completion(Swift.Result.failure(.noConnection), nil)
-            case .error(let statusErrorCode, let errorMessage, let errorStringObject):
+            case .error(let statusErrorCode, let errorMessage, let errorStringObject, _):
                 var errorObject: S?
                 if let stringToData = errorStringObject, let data: Data = stringToData.data(using: String.Encoding.utf8), let object: S = try? JSONDecoder().decode(S.self, from: data) {
                     errorObject = object
@@ -119,7 +119,7 @@ public extension NetSupport {
                 completion(Swift.Result.failure(.mappingError))
             case .noConnection:
                 completion(Swift.Result.failure(.noConnection))
-            case .error(let statusErrorCode, let errorMessage, let errorStringObject):
+            case .error(let statusErrorCode, let errorMessage, let errorStringObject, _):
                 var errorObject: S?
                 if let stringToData = errorStringObject, let data: Data = stringToData.data(using: String.Encoding.utf8), let object: S = try? JSONDecoder().decode(S.self, from: data) {
                     errorObject = object
@@ -156,7 +156,7 @@ public extension NetSupport {
                 completion(Swift.Result.failure(.mappingError))
             case .noConnection:
                 completion(Swift.Result.failure(.noConnection))
-            case .error(let statusErrorCode, let errorMessage, let errorStringObject):
+            case .error(let statusErrorCode, let errorMessage, let errorStringObject, _):
                 var errorObject: S?
                 if let stringToData = errorStringObject, let data: Data = stringToData.data(using: String.Encoding.utf8), let object: S = try? JSONDecoder().decode(S.self, from: data) {
                     errorObject = object
