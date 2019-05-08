@@ -17,7 +17,7 @@ public class PocketAlamofireAdapter {
                     processErrorResponse(afResponse.error, statusCode: afResponse.response?.statusCode, responseHeaders: afResponse.response?.allHeaderFields, bodyString: bodyString, completion: completion)
                     return
                 }
-                processSuccessResponseString(responseString, responseHeaders: headers, status: statusCode, completion: completion)
+                processSuccessResponseString(responseString != "" ? responseString : "{}", responseHeaders: headers, status: statusCode, completion: completion)
         }
         return (afResponse.task != nil) ? afResponse.task!.taskIdentifier : -1
     }
