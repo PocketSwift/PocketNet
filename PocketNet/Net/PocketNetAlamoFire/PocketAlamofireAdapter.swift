@@ -8,7 +8,7 @@ public class PocketAlamofireAdapter {
             method: self.transformMethod(request.method),
             parameters: request.body.params,
             encoding: self.transformParameterEncoding(request.body.parameterEncoding),
-            headers: request.headers).validate().responseString { afResponse in
+            headers: request.headers).validate().responseString(encoding: .utf8) { afResponse in
                 guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
                     var bodyString: String?
                     if let data = afResponse.data {
