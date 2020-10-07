@@ -116,6 +116,34 @@ public class PocketNetAlamofire: PocketNet {
         }
     }
     
+    public func cancelAllTasks() {
+        self.manager.session.getTasksWithCompletionHandler  { (sessionDataTask, uploadData, downloadData) in
+            var completed = false
+            sessionDataTask.forEach {
+                if $0.state == .running {
+                    $0.cancel()
+                    completed = true
+                    return
+                }
+            }
+            if completed { return }
+            downloadData.forEach {
+                if $0.state == .running {
+                    $0.cancel()
+                    completed = true
+                    return
+                }
+            }
+            if completed { return }
+            uploadData.forEach {
+                if $0.state == .running {
+                    $0.cancel()
+                    return
+                }
+            }
+        }
+    }
+    
     public func isReachable() -> Bool {
         return self.reachabilityManager.isReachable
     }

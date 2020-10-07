@@ -22,4 +22,5 @@ public protocol PocketNet {
     func setupCaching(_ size: Int)
     func removeCaching()
     func cancelTask(identifier: Int)
+    func cancelAllTasks()
 }
