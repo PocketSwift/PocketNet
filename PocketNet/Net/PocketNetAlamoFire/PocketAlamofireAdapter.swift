@@ -40,7 +40,7 @@ public class PocketAlamofireAdapter {
                 multipartFormData.append(archive.data, withName: archive.apiName, fileName: archive.fileName, mimeType: archive.mimeType)
             }
             for (key, value) in request.body.params {
-                multipartFormData.append(value.data(using: String.Encoding.utf8.rawValue)!, withName: key)
+                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key)
             }
         }, with: urlRequest, encodingCompletion: { encodingResult in
             switch encodingResult {
