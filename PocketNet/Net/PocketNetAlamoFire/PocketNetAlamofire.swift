@@ -80,8 +80,8 @@ public class PocketNetAlamofire: PocketNet {
         return PocketAlamofireAdapter.adaptRequest(request, manager: self.manager, completion: completion)
     }
     
-    public func uploadRequest(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
-        return PocketAlamofireAdapter.adaptUploadRequest(request, manager: self.manager, archives: archives, actualProgress: actualProgress, completion: completion)
+    public func uploadRequest(_ request: NetRequest, archives: [FormData], jsonKey: String, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
+        return PocketAlamofireAdapter.adaptUploadRequest(request, manager: self.manager, archives: archives, jsonKey: jsonKey, actualProgress: actualProgress, completion: completion)
     }
     
     public func downloadRequest(_ request: NetRequest, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {

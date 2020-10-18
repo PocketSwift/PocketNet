@@ -16,7 +16,7 @@ public enum ConnectionType {
 public protocol PocketNet {
     var reachabilityListener: ((NetworkReachabilityStatus?) -> Void)? { get set }
     func launchRequest(_ request: NetRequest, completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int
-    func uploadRequest(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int
+    func uploadRequest(_ request: NetRequest, archives: [FormData], jsonKey: String, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int
     func downloadRequest(_ request: NetRequest, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int
     func isReachable() -> Bool
     func setupCaching(_ size: Int)

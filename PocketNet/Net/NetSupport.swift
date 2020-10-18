@@ -166,8 +166,8 @@ public extension NetSupport {
         }
     }
     
-    func netUploadArchives<T: Decodable, S: Decodable>(_ request: NetRequest, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((Swift.Result<T, NetErrorDecodable<S>>) -> Void)) -> Int {
-        return net.uploadRequest(request, archives: archives,
+    func netUploadArchives<T: Decodable, S: Decodable>(_ request: NetRequest, archives: [FormData], jsonKey: String, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((Swift.Result<T, NetErrorDecodable<S>>) -> Void)) -> Int {
+        return net.uploadRequest(request, archives: archives, jsonKey: jsonKey,
                                  actualProgress: { progress in
                                     actualProgress(progress)
         },

@@ -24,7 +24,7 @@ Elegant net abstraction layer written in Swift 5.0, we provide an integration wi
 $ gem install cocoapods
 ```
 
-> CocoaPods 1.1+ is required to build PocketNet 2.3.4
+> CocoaPods 1.1+ is required to build PocketNet 2.4.0
 
 To integrate PocketNet into your Xcode project using CocoaPods, specify it in your `Podfile`:
 

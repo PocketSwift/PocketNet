@@ -22,7 +22,7 @@ public class PocketAlamofireAdapter {
         return (afResponse.task != nil) ? afResponse.task!.taskIdentifier : -1
     }
     
-    public static func adaptUploadRequest(_ request: NetRequest, manager: SessionManager, archives: [FormData], actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
+    public static func adaptUploadRequest(_ request: NetRequest, manager: SessionManager, archives: [FormData], jsonKey: String, actualProgress:@escaping ((Double) -> Void), completion: @escaping ((ResultNetworkResponse) -> Void)) -> Int {
         var uploadRequest: Request!
         var urlRequest: URLRequest!
         do {
@@ -39,9 +39,8 @@ public class PocketAlamofireAdapter {
             for archive in archives {
                 multipartFormData.append(archive.data, withName: archive.apiName, fileName: archive.fileName, mimeType: archive.mimeType)
             }
-            for (key, value) in request.body.params {
-                multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key)
-            }
+            let dataParameters = try! JSONSerialization.data(withJSONObject: request.body.params, options: JSONSerialization.WritingOptions(rawValue: 0))
+            multipartFormData.append(dataParameters, withName: jsonKey, mimeType: "application/json")
         }, with: urlRequest, encodingCompletion: { encodingResult in
             switch encodingResult {
             case .success(let upload, _, _):
