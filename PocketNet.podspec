@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PocketNet"
-  s.version      = "2.3.3"
+  s.version      = "2.3.4"
   s.homepage     = "https://github.com/PocketSwift/PocketNet"
   s.summary      = "Net with Alamofire implementation"
   s.license      = { :type => 'MIT', :file => 'LICENSE' }

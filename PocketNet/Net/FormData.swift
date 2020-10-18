@@ -7,7 +7,7 @@ public class FormData {
     let mimeType: String
     let data: Data
     
-    init(apiName: String, fileName: String, mimeType: String, data: Data) {
+    public init(apiName: String, fileName: String, mimeType: String, data: Data) {
         self.apiName = apiName
         self.fileName = fileName
         self.mimeType = mimeType
