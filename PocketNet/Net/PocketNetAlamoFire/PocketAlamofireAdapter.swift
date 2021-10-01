@@ -49,7 +49,7 @@ public class PocketAlamofireAdapter {
                 upload.uploadProgress(closure: { progress in
                     actualProgress(progress.fractionCompleted)
                 })
-                upload.validate().responseString { afResponse in
+                upload.validate().responseString(encoding: .utf8) { afResponse in
                     guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
                         var bodyString: String?
                         if let data = afResponse.data {
@@ -82,7 +82,7 @@ public class PocketAlamofireAdapter {
             .downloadProgress { progress in
                 actualProgress(progress.fractionCompleted)
             }
-            .validate().responseString { afResponse in
+            .validate().responseString(encoding: .utf8) { afResponse in
                 guard let responseString = afResponse.result.value, let headers = afResponse.response?.allHeaderFields, let statusCode = afResponse.response?.statusCode else {
                     var bodyString: String?
                     if let data = afResponse.resumeData{
